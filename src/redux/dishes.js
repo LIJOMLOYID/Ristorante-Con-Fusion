@@ -21,6 +21,8 @@ export const Dishes = (
       return { ...state, isLoading: true, errMess: null, dishes: [] };
 
     case ActionTypes.DISHES_FAILED:
+      console.log("IN REDUCER");
+      console.log(action.payload);
       return {
         ...state,
         isLoading: false,

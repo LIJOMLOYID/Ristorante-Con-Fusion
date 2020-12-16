@@ -11,7 +11,10 @@ import { Loading } from "./LoadingComponent";
 import { baseUrl } from "../shared/baseUrl";
 
 function RenderCard({ item, isLoading, errMess }) {
-  // console.log(item);
+  console.log("ERRMESS IS");
+  console.log(errMess);
+  console.log("ITEM IS");
+  console.log(item);
 
   if (isLoading) {
     return <Loading />;
@@ -33,6 +36,7 @@ function RenderCard({ item, isLoading, errMess }) {
 }
 
 function Home(props) {
+  console.log("PROPS IN HOME");
   console.log(props);
   return (
     <div className="container">
@@ -41,14 +45,14 @@ function Home(props) {
           <RenderCard
             item={props.dish}
             isLoading={props.dishesLoading}
-            errorMess={props.dishesErrMess}
+            errMess={props.dishesErrMess}
           />
         </div>
         <div className="col 12 col-md m-1">
           <RenderCard
             item={props.promotion}
             isLoading={props.promosLoading}
-            errorMess={props.promosErrMess}
+            errMess={props.promosErrMess}
           />
         </div>
         <div className="col 12 col-md m-1">

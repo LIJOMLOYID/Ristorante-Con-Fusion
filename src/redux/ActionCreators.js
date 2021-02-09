@@ -274,7 +274,9 @@ export const postFeedback = (feedback) => (dispatch) => {
       }
     )
     .then((response) => response.json())
-    .then((response) => dispatch(addComment(response)))
+    .then((response) =>
+      alert("Thank you for your feedback!" + JSON.stringify(response))
+    )
     .catch((error) => {
       console.log("Post Feedback", error.message);
       alert("Your feedback could not be posted\nError: " + error.message);
